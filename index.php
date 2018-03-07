@@ -804,7 +804,11 @@ Indonesia</address>
 
         </div>
 <div class="mainContent">
-<h2>Get in Touch</h2>
+<?php
+date_default_timezone_set("Indonesia");
+echo "The time is " . date("h:i:sa"). " , " . date("d/m/Y") . "<br>";;
+?>
+<h2><br>Get in Touch</h2>
 <div class="contactFrm">
 	<?php if(!empty($statusMsg)){ ?>
 	<p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
