@@ -35,7 +35,7 @@
   ======================================================= -->
 <style>
     .mainContent{
-	width:35%;
+	width:75%;
 	margin:2.5em auto;
 	background:#fff;
 	padding:2.5em;
@@ -48,7 +48,7 @@
 	letter-spacing:5px;
 }
 .contactFrm input[type="text"], .contactFrm input[type="email"] {
-	width:70%;
+	width:80%;
 	outline:none;
 	font-size:0.9em;
 	padding:.7em 1em;
@@ -59,7 +59,7 @@
 }
 .contactFrm textarea {
 	resize:none;
-	width:93.5%;
+	width:95%;
 	font-size:0.9em;
 	outline:none;
 	padding:.6em 1em;

@@ -73,5 +73,5 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQ
 else {
     echo $responseArray['message'];
     echo "<br/>";
-    echo "<a href='http://numadthoni.web.id'>Kembali</a>";
+    echo "<a href='http://https://informationtechnology-its.000webhostapp.com/'>Kembali</a>";
 }
