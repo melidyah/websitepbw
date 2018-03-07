@@ -35,7 +35,7 @@
   ======================================================= -->
 <style>
     .mainContent{
-	width:75%;
+	width:100;
 	margin:2.5em auto;
 	background:#fff;
 	padding:2.5em;
@@ -48,7 +48,7 @@
 	letter-spacing:5px;
 }
 .contactFrm input[type="text"], .contactFrm input[type="email"] {
-	width:80%;
+	width:100%;
 	outline:none;
 	font-size:0.9em;
 	padding:.7em 1em;
@@ -59,7 +59,7 @@
 }
 .contactFrm textarea {
 	resize:none;
-	width:95%;
+	width:100%;
 	font-size:0.9em;
 	outline:none;
 	padding:.6em 1em;
@@ -78,7 +78,7 @@
 	-webkit-transition:0.5s all;
 	transition:0.5s all;
 	-moz-transition:0.5s all;
-	width:47%;
+	width:15%;
 	cursor:pointer;
 }
 .contactFrm input[type="submit"]:hover {
@@ -804,7 +804,7 @@ Indonesia</address>
 
         </div>
 <div class="mainContent">
-<h2>Contact Us</h2>
+<h2>Get in Touch</h2>
 <div class="contactFrm">
 	<?php if(!empty($statusMsg)){ ?>
 	<p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
