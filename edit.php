@@ -4,6 +4,9 @@ $username = "root";
 $password = "";
 $dbname = "comment";
 
+$name=$_POST["name"];
+$comment=$_POST["comment"];
+$date=$_POST["date"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,14 +15,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-// sql to delete a record
-$sql = "DELETE FROM comment WHERE id='$id' ";
+$sql = "UPDATE comment SET name='$name', comment='$comment' WHERE date='$date'"
 
 if ($conn->query($sql) === TRUE) {
-    header('Location: index.php#contact');
+    echo "Record updated successfully";
 } else {
-    echo "Error deleting record: " . $conn->error;
+    echo "Error updating record: " . $conn->error;
 }
 
 $conn->close();
 ?>
+
