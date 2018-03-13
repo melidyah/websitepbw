@@ -14,7 +14,15 @@ if ($conn->connect_error) {
 $sql = "UPDATE comment SET name='$name', comment='$comment' WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    <form action="edit.php">
+  Name<br>
+  <input type="text" name="name" value="">
+  <br>
+  Comment<br>
+  <input type="text" name="comment" value="">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
 } else {
     echo "Error updating record: " . $conn->error;
 }
