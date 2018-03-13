@@ -11,9 +11,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "UPDATE comment SET name='$name', comment='$comment' WHERE id='$id'"
+$sql = "UPDATE comment SET name='$name', comment='$comment' WHERE id='$id'";
 
-if ($conn->query($sql) === TRUE) {
+$result = $conn->query($sql);
+if ($result === TRUE) {
     header('Location: index.php#contact');
 } else {
     echo "Error updating record: " . $conn->error;
