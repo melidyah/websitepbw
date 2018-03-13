@@ -829,8 +829,59 @@ echo "The time is " . date("h:i:sa"). " , " . date("d/m/Y") . "<br>";;
 </div>
 </div>
 
-      </div>
+      <form action="insert.php">
+  Name<br>
+  <input type="text" name="name" value="">
+  <br>
+  Comment<br>
+  <input type="text" name="comment" value="">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+        
     </section><!-- #contact -->
+        
+         <section id="portfolio">
+	    	<div class="container">
+				<div class="row text-center" id= "heading">
+	        		<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id= "heading-text">
+	        			<h2>Komentar</h2>
+	        		</div>
+		        </div>
+                        <div class="column">
+                    <?php include "dbconfig.php" ;
+                            
+                    $stmt = $DB_con->prepare("SELECT * FROM comment");
+                    $stmt->execute();
+                    while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    ?>
+                    <div class="span3">
+                        <div class="home-post">
+                            <div class="entry-content">
+                                <h5><strong><a><?php echo $data['name'];?></a></strong></h5>
+                                <p>
+                                    <?php echo $data['date']; ?> 
+                                    <?php print ("<br>");?>
+                                    <?php echo $data['comment'];?>
+                                    <?php print ("<br>");?>
+                                    <?php echo "<td><a href='edit.php?id=$data[id]'>Edit</a> | <a href='delete.php?id=$data[id]'>Delete</a></td></tr>"; ?>
+                                
+                                </p>
+                                
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                   <?php } ?>
+                </div>
+                 </div>
+                        
+                     </section>    
+        
+    </section><!-- #contact -->
+      
+      
 
   </main>
 
