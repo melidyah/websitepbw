@@ -64,14 +64,17 @@ class Welcome extends CI_Controller {
 
     public function update(){
       $data = array(
-        'name' => $_POST['name'],
-        'comment' => $_POST['comment']
+        'name' => $this->input->post('name'),
+        'comment' => $this->input->post('comment')
       );
-      $where = array('id'=> $id);
+
+      $where = array('id' => $this->input->post('id'));
       $result = $this->update_model->updateData('comment',$data, $where);
-      if($result >= 1)
-      {
+      if ($result > 0){
         redirect(base_url());
       }
+
+
+
     }
 }
