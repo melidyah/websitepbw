@@ -77,4 +77,19 @@ class Welcome extends CI_Controller {
 
 
     }
+
+    public function download()
+    {
+      $data = $this->download_model->getData();
+      $this->load->view('download', array('data'=> $data));
+    }
+
+    public function report(){
+      $this->load->model("mread");
+      $this->load->helper('url_helper');
+      $data = array(
+                "report"=> $this->mread->report());
+      //var_dump($data);
+        $this->load->view('report', $data);
+}
 }

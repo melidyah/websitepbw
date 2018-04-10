@@ -843,9 +843,13 @@ Indonesia</address>
 	    	<div class="container">
 
 				<div class="row text-left" id= "heading">
-	        		<div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id= "heading-text">
-	        			<h2>Komentar</h2>
-	        		</div>
+          <div class="col-md-6 col-md-offset-3 wow animated zoomInDown" id= "heading-text">
+            <h2>Komentar</h2>
+            <a href='<?php echo base_url()."index.php/Welcome/download/"; ?>'>Download Komentar</a>
+            <br>
+            <a href='<?php echo site_url('Welcome/report'); ?>'>Statistik Komentar</a>
+            <br><br>
+          </div>
 		        </div>
                         <div class="column">
 
